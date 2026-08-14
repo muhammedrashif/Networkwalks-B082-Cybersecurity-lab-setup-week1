@@ -1,12 +1,12 @@
 # Networkwalks-B082-Cybersecurity-lab-setup-week1
 cybersecurity lab environment setup
-# 🔐 Cybersecurity Lab Environment Setup
+#  Cybersecurity Lab Environment Setup
 
 > **Building an isolated virtual lab for ethical hacking, penetration testing, and cybersecurity learning using Oracle VirtualBox and Kali Linux.**
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 This project documents the setup and configuration of a virtual cybersecurity laboratory using **Oracle VirtualBox** and **Kali Linux**.
 
@@ -24,7 +24,7 @@ The lab can later be expanded by adding intentionally vulnerable target machines
 
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 The main objectives of this project are to:
 
@@ -40,7 +40,7 @@ The main objectives of this project are to:
 
 ---
 
-## 🏗️ Lab Architecture
+##  Lab Architecture
 
 The cybersecurity lab is built around a private NAT Network that connects Kali Linux with future target virtual machines.
 
@@ -74,7 +74,7 @@ The cybersecurity lab is built around a private NAT Network that connects Kali L
 
 ---
 
-## ⚙️ Lab Configuration
+##  Lab Configuration
 
 | Component      | Configuration     |
 | -------------- | ----------------- |
@@ -91,7 +91,7 @@ The cybersecurity lab is built around a private NAT Network that connects Kali L
 
 ---
 
-# 🛠️ Lab Setup
+#  Lab Setup
 
 ## Step 1 — Install VirtualBox
 
@@ -157,7 +157,7 @@ Network     : NatNetwork
 
 ### Kali Network Configuration
 
-![Kali Network Configuration](kali config.png)
+![Kali Network Configuration](kali-config.png)
 
 ---
 
@@ -219,25 +219,7 @@ The test completed successfully with replies received and **0% packet loss**, co
 
 ---
 
-## Step 7 — Create a Clean VM Snapshot
-
-After completing the installation and network configuration, a clean VirtualBox snapshot was created.
-
-Example snapshot name:
-
-```text
-Cybersecurity-Lab-Clean-Baseline
-```
-
-This snapshot provides a recovery point before performing future cybersecurity experiments.
-
-### Lab Snapshot / Final Setup
-
-![Lab Snapshot](labarchitecture.png)
-
----
-
-# 🔎 Lab Verification
+#  Lab Verification
 
 | Test             | Command               | Expected Result       |
 | ---------------- | --------------------- | --------------------- |
@@ -249,8 +231,41 @@ This snapshot provides a recovery point before performing future cybersecurity e
 | Test DNS         | `ping google.com`     | Domain resolves       |
 
 ---
+##  Final Kali Linux Network Configuration
 
-# 🐞 Problems Encountered & Solutions
+After configuring the Ethernet interface, the final network status was verified successfully.
+
+### Network Connection Status
+
+The `eth0` interface is now successfully connected:
+
+```text
+DEVICE   TYPE      STATE      CONNECTION
+eth0     ethernet  connected  eth0
+lo       loopback  connected  (externally) lo
+```
+
+### Internet Connectivity Test
+
+The configuration was verified using:
+
+```bash
+ping -c 4 google.com
+```
+
+The test was successful:
+
+```text
+4 packets transmitted, 4 received, 0% packet loss
+```
+
+This confirms that the Kali Linux virtual machine has successfully established network connectivity.
+
+###  Final Configuration Screenshot
+
+![Final Kali Linux Network Configuration](kali-config.png)
+
+#  Problems Encountered & Solutions
 
 ## Problem — Network Interface Disconnected
 
@@ -276,7 +291,7 @@ After activating the connection, the interface became connected and Internet acc
 
 ---
 
-# 💡 What I Learned
+#  What I Learned
 
 Through this project, I learned:
 
@@ -302,39 +317,9 @@ Through this project, I learned:
 * Troubleshooting connectivity.
 * Verifying Internet access.
 
-### Documentation
-
-* Organizing a professional GitHub repository.
-* Placing screenshots between setup steps.
-* Recording commands, configurations, and troubleshooting procedures.
-
 ---
 
-# 🚀 Future Improvements
-
-The lab can be expanded with:
-
-* [ ] Metasploitable
-* [ ] Windows target VM
-* [ ] OWASP Juice Shop
-* [ ] DVWA
-* [ ] Nmap scanning exercises
-* [ ] Wireshark packet analysis
-* [ ] Burp Suite web testing
-* [ ] Vulnerability assessment labs
-* [ ] SIEM and log analysis
-
----
-
-# 🔐 Security & Ethical Use
-
-This laboratory is intended strictly for **educational purposes and authorized security testing**.
-
-> **Important:** Never scan, exploit, or attack systems that you do not own or do not have explicit permission to test.
-
----
-
-# 📚 Skills Demonstrated
+#  Skills Demonstrated
 
 ```text
 Kali Linux
@@ -348,40 +333,5 @@ Burp Suite
 Cybersecurity Lab Design
 Technical Documentation
 Ethical Hacking Fundamentals
-```
+``
 
----
-
-# 👨‍💻 Author
-
-**Rashifk**
-
-Cybersecurity Learner | Ethical Hacking Enthusiast | Network Security
-
----
-
-## ⭐ Project Status
-
-🟢 **Cybersecurity Lab Setup Completed**
-
-Future cybersecurity exercises will be added progressively.
-
----
-
-## 📁 Repository Structure
-
-```text
-Cybersecurity-Lab-Setup/
-│
-├── README.md
-├── kali config.png
-├── kalilinux.png
-├── labarchitecture.png
-└── natnetwork.png
-```
-
----
-
-## 📌 Disclaimer
-
-This repository is intended for **cybersecurity education, experimentation, and authorized testing only**. The author is not responsible for misuse of the techniques or tools documented in this project.
