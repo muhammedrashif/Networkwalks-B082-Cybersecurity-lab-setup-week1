@@ -155,11 +155,7 @@ Attached to : NAT Network
 Network     : NatNetwork
 ```
 
-### Kali Network Configuration
 
-![Kali Network Configuration](kali-config.png)
-
----
 
 ## Step 5 — Configure Kali Linux Networking
 
@@ -263,7 +259,7 @@ This confirms that the Kali Linux virtual machine has successfully established n
 
 ###  Final Configuration Screenshot
 
-![Final Kali Linux Network Configuration](kali-config.png)
+![Final Kali Linux Network Configuration](kaliconfig.png)
 
 #  Problems Encountered & Solutions
 
